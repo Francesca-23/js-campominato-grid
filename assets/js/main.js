@@ -70,36 +70,37 @@ function difficile(){
     }
 }
 
-//selezione della difficoltà e generazione della grliglia
+//selezione della difficoltà e generazione della griglia
 let select = document.getElementById("select");
 let opzione = select.options[select.selectedIndex].value;
 
 select.addEventListener("change", function(){
 
+    let htmlMain = document.querySelector('main');
     opzione = select.options[select.selectedIndex].value;
 
     if(opzione == 1){
         document.querySelector('#button').addEventListener('click', function(){
+            griglia.innerHTML = ""
             facile()
         })
         
             
     }else if(opzione == 2){
         document.querySelector('#button').addEventListener('click', function(){
+            griglia.innerHTML = ""
             medio()
         })
 
     }else if(opzione == 3){
         document.querySelector('#button').addEventListener('click', function(){
+            griglia.innerHTML = ""
             difficile()
         })
     }
 
 })
 
-
-
     
-
 
 
